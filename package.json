@@ -1,0 +1,19 @@
+{
+  "name": "node-microservice-with-docker-in-30mins",
+  "version": "1.0.0",
+  "description": "NodeJS Microservice with Docker in 30 minutes",
+  "main": "index.js",
+  "repository": "https://github.com/motleyagency/node-microservice-with-docker-in-30mins",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pete Nykänen <pete.nykanen@motleyagency.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-motley": "^4.0.0",
+    "express": "^4.14.0",
+    "node-fetch": "^1.6.3"
+  },
+  "private": true
+}
