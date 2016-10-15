@@ -25,6 +25,7 @@ These are the step-by-step guidelines we ran through while making this repo.
 
 - [NodeJS](https://nodejs.org/en/download/) v6.x.x or newer
   - If you have [`Homebrew`](http://brew.sh) installed, you can just do `brew update && brew install node`.
+- Docker installed, for macOS we recommend [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg), for Windows [Docker for Windows](https://download.docker.com/win/stable/InstallDocker.msi) and on other *nix platforms you know what to do! 
 
 ### Installing dependencies
 
