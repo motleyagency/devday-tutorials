@@ -57,7 +57,7 @@ bleeding edge and whatnot!
 
 ``` bash
 npm install -g yarn
-yarn add express node-fetch eslint-config motley
+yarn add express node-fetch eslint-config-motley
 ```
 
 The packages are now in the `package.json`s `dependencies` field.
