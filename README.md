@@ -155,7 +155,7 @@ docker build -t devday .
 and then run it with `docker run`
 
 ```
-docker run -p 8080:8080 devday
+docker run -it -p 8080:8080 devday
 ```
 
 and you should again see Katy Perry's public feed as JSON at [`http://localhost:8080/api/user/katyperry`](http://localhost:8080/api/user/katyperry).
