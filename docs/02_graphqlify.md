@@ -59,7 +59,7 @@ const fetch = require("node-fetch");
 
 Great! We are going to use the `graphqlHTTP` one to create our `graphql` endpoint. After the existing endpoint, lets add this:
 
-```
+```diff
 app.get("/api/user/:username", (req, res) => {
   const { username } = req.params;
 
@@ -144,7 +144,7 @@ First we need to add an argument to our query and resolver.
 ...
 
 const root = {
--  feed () => ({ id: '0123456', name: `Katy Perry`})
+- feed () => ({ id: '0123456', name: `Katy Perry`})
 + feed ({ username }) => ({ id: '0123456', name: username})
 };
 ```
@@ -270,7 +270,7 @@ Lets start from the top. First off, the resonse to `feed` is a `Feed` that consi
 -   username: String
 - }
 
-# Username's instagram feed
++# Username's instagram feed
 + type Feed {
 +   # List of user items
 +   items: [Item]
