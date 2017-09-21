@@ -9,7 +9,7 @@ to reflect one of those kind of REST APIs.
 
 > Prerequisites
 
-- Make sure you have completed [01 - NodeJS Microservice with Docker in 30 mins)(docs/01_nodejs_microservice_with_docker_in_30mins.md)
+- Make sure you have completed [01 - NodeJS Microservice with Docker in 30 mins](docs/01_nodejs_microservice_with_docker_in_30mins.md)
 - Read up on [GraphQL.org](http://graphql.org/) about GraphQL
 
 ## Steps

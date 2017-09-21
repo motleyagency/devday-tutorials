@@ -9,7 +9,7 @@ clarify some concepts behind today's web development basics and beyond!
 
 > Learn how to create a tiny microservice running in a Docker container that proxies JSON data from Instagram
 
-[02 - GraphQLify!](02_graphqlify.md)
+[02 - GraphQLify!](docs/02_graphqlify.md)
 
 > Learn how to create a simple GraphQL mirroring for existing APIs
 
