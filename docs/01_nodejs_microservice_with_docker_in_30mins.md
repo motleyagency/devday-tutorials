@@ -1,7 +1,7 @@
 # NodeJS Microservice with Docker in 30 mins
-> 😻 [Motley Agency](https://motleyagency.com/) Dev Day 14.10.2016 😻
+> 😻 [Motley](https://motley.fi/) Dev Day 14.10.2016 😻
 
-Contents of this document were written on the fly on [Motley Agency](https://motleyagency.com)
+Contents of this document were written on the fly on [Motley](https://motley.fi)
 development day, demonstrating how to build [`NodeJS`](https://nodejs.org) 
 microservices with Express running inside a [`Docker`](https://www.docker.com/) container.
 

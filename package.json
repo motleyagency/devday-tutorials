@@ -1,5 +1,5 @@
 {
-  "name": "node-microservice-with-docker-in-30mins",
+  "name": "@motley/devday-tutorials",
   "version": "1.0.0",
   "description": "NodeJS Microservice with Docker in 30 minutes",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged"
   },
-  "author": "Pete Nykänen <pete.nykanen@motleyagency.com>",
+  "author": "Pete Nykänen <pete.nykanen@motley.fi>",
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.0",

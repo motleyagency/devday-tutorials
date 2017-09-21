@@ -1,4 +1,4 @@
-# DevDay walkthroughs
+# DevDay tutorials
 
 This repository contains some simple tutorials and walkthroughs, that (hopefully)
 clarify some concepts behind today's web development basics and beyond!

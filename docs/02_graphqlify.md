@@ -1,6 +1,6 @@
 # 02 - GraphQLify!
 
-> 😻 [Motley Agency](https://motleyagency.com/) Dev Day 22.09.2017 😻
+> 😻 [Motley](https://motley.fi/) Dev Day 22.09.2017 😻
 
 In this lesson we are going pick up from we left off nearly a year ago!
 [GraphQL](http://graphql.org/) is the new hotness, but unfortunately
