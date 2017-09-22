@@ -103,7 +103,7 @@ Next we are going to create a `resolver` for it, that actually gives the query t
 
 ```bash
 const root = {
-  feed () => ({ id: '0123456', name: `Katy Perry`})
+  feed: () => ({ id: '0123456', name: `Katy Perry`})
 };
 ```
 
@@ -144,8 +144,8 @@ First we need to add an argument to our query and resolver.
 ...
 
 const root = {
-- feed () => ({ id: '0123456', name: `Katy Perry`})
-+ feed ({ username }) => ({ id: '0123456', name: username})
+- feed: () => ({ id: '0123456', name: `Katy Perry`})
++ feed: ({ username }) => ({ id: '0123456', name: username})
 };
 ```
 The `!` after `String` means that username is mandatory. Now try running a query like this:
