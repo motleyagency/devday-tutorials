@@ -387,7 +387,7 @@ const schema = buildSchema(`
     items: [Item]
     more_available: Boolean
     status: String
-    description:
+    description: String
   }
 
   type Query {
