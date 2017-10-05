@@ -71,7 +71,7 @@ app.get("/api/user/:username", (req, res) => {
 
 +app.use("/graphql", graphqlHTTP({
 +  schema,
-+  rootValue: root,
++  rootValue: rootResolver,
 +  graphiql: true,
 +  formatError: error => ({
 +    message: error.message,
@@ -82,29 +82,30 @@ app.get("/api/user/:username", (req, res) => {
 +}));
 ```
 
-It takes an `options` object in, where we define our schema, our root value, enable `graphiql` and format our error messages. But wait, we haven't actually created the schema or the `rootValue` yet (whatever those are!). Lets do this now.
+It takes an `options` object in, where we define our schema, our root value, enable `graphiql` and format our error messages. But wait, we haven't actually created the schema or the `rootResolver` yet (whatever those are!). Lets do this now.
 
 Somewhere before those lines, create some simple placeholders:
 
 ``` bash
-const schema = buildSchema`
+const schema = buildSchema(`
   type User {
     id: String
     username: String
+    name: String
   }
   type Query {
     feed: User
   }
-`;
+`);
 ```
 
-In the schema, we define a `query` `feed`, that returns a type called `User`, which consists of an `id` and `username`.
+In the schema, we define a `query` `feed`, that returns a type called `User`, which consists of an `id`, `username` and `name`.
 
 Next we are going to create a `resolver` for it, that actually gives the query the values.
 
 ```bash
-const root = {
-  feed: () => ({ id: '0123456', name: `Katy Perry`})
+const rootResolver = {
+  feed: () => ({ id: '0123456', username: 'katyperry', name: 'Katy Perry'})
 };
 ```
 
@@ -309,7 +310,7 @@ The type `Item` is a long one, that consists of many things:
   }
 ```
 
-Next we need to implement other types too, like User, ImageType, Caption, Likes, Comments and such! If you look at the JSON response, you'll notice that some types are used in many ways! For example `User` type is the same type as the responses for the field `form`.
+Next we need to implement other types too, like User, ImageType, Caption, Likes, Comments and such! If you look at the JSON response, you'll notice that some types are used in many ways! For example `User` type is the same type as the responses for the field `from`.
 
 ```graphql
   type Caption {
