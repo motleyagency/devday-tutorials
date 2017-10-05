@@ -2,7 +2,7 @@
 > 😻 [Motley](https://motley.fi/) Dev Day 14.10.2016 😻
 
 Contents of this document were written on the fly on [Motley](https://motley.fi)
-development day, demonstrating how to build [`NodeJS`](https://nodejs.org) 
+development day, demonstrating how to build [`NodeJS`](https://nodejs.org)
 microservices with Express running inside a [`Docker`](https://www.docker.com/) container.
 
 The 30 minutes included:
@@ -10,11 +10,11 @@ The 30 minutes included:
   - Installing dependencies
   - Creating an [`Express` app](http://expressjs.com/) that
     - creates an server listening on `8080`.
-    - creates an endpoint `/api/user/:username` that [fetches](https://github.com/bitinn/node-fetch) 
+    - creates an endpoint `/api/user/:username` that [fetches](https://github.com/bitinn/node-fetch)
     users [Instagram](https://instagram.com) feed.
   - Adding a `Dockerfile` that builds and runs the `NodeJS` app.
   - Deploying the app to [`zeit.co`](https://zeit.co)
-  
+
 ## Prerequisites
 
 - [NodeJS](https://nodejs.org/en/download/) v6.x.x or newer
@@ -53,7 +53,7 @@ choice is yours!
 
 We are going to need the following packages: `express` and `node-fetch`.
 ``` bash
-# install dependencies 
+# install dependencies
 npm install express node-fetch
 
 # or
@@ -78,7 +78,7 @@ back as an response.
 
 ``` js
 const express = require("express"); // require express
-const fetch = require("node-fetch"); // require node-fetch 
+const fetch = require("node-fetch"); // require node-fetch
 
 const app = express(); // initialize express app
 
@@ -120,24 +120,32 @@ Now we can run the server just with `npm start`!
 ### Creating a Dockerfile
 
 The `Dockerfile` is equally simple. We take the `node:latest` base image,
-copy some files in, install dependencies, expose a port and run 
+copy some files in, install dependencies, expose a port and run
 the start command. Create a file called `Dockerfile` to the root of your project
 and add the following set of commands to that file:
 
 ``` Dockerfile
-FROM node:latest # Using the latest NodeJS image...
+# Using the latest NodeJS image...
+FROM node:latest
 
-LABEL name="node-microservice-with-docker-in-30mins" # name label for our image
+# name label for our image
+LABEL name="node-microservice-with-docker-in-30mins"
 
-WORKDIR /tmp # set the working directory to /tmp
-COPY ./package.json package.json # copy the package.json file
-COPY ./index.js index.js # copy the index.js file
+# set the working directory to /tmp
+WORKDIR /tmp
+# copy the package.json file
+COPY ./package.json package.json
+# copy the index.js file
+COPY ./index.js index.js
 
-RUN npm install # install dependencies
+# install dependencies
+RUN npm install
 
-EXPOSE 8080 # expose the port
+# expose the port
+EXPOSE 8080
 
-CMD ["node", "index.js"] # run the index.js file
+# run the index.js file
+CMD ["node", "index.js"]
 ```
 
 Now we can build the image with `docker build`:
@@ -202,5 +210,5 @@ now
 
 ```
 
-And finally you should once again see Katy Perry's public feed at 
+And finally you should once again see Katy Perry's public feed at
 `https://node-microservice-with-docker-in-30mins-randomlettershere.now.sh/api/user/katyperry`!
