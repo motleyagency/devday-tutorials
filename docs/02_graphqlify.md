@@ -145,7 +145,7 @@ First we need to add an argument to our query and resolver.
 
 ...
 
-const root = {
+const rootResolver = {
 - feed: () => ({ id: '0123456', name: `Katy Perry`})
 + feed: ({ username }) => ({ id: '0123456', name: username})
 };
@@ -167,7 +167,7 @@ This is a good start, but lets dive even deeper!
 First, lets make our resolver give the actualy results from the Instagram API.
 
 ```diff
-const root = {
+const rootResolver = {
 - feed ({ username }) => ({ id: '0123456', name: username})
 + feed: async ({ username }) => fetch(`https://instagram.com/${username}/media`).then(res => res.json()),
 };
